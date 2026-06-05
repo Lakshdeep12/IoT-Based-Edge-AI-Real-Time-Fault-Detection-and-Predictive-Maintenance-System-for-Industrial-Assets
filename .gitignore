@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+.ipynb_checkpoints/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+myenv/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+backend/app/database/.env
+
+# Generated outputs
+reports/
+*.log
+
+# Oversized model artifacts: store these with Git LFS or external object storage.
+ml_engine/models/Randomforest Trained/factory_sensor_simulator_rf.joblib
+ml_engine/models/Randomforest Trained/randomforest_Regressor/FD001-cmapss_regressor.joblib
+ml_engine/models/Randomforest Trained/randomforest_Regressor/FD002-cmapss_regressor.joblib
+ml_engine/models/Randomforest Trained/randomforest_Regressor/FD003-cmapss_regressor.joblib
+ml_engine/models/Randomforest Trained/randomforest_Regressor/FD004-cmapss_regressor.joblib
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
