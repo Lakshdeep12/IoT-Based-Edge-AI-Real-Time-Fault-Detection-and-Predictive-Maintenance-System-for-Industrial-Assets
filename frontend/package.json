@@ -3,13 +3,15 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "lint": "eslint .",
-    "format": "prettier --write ."
-  },
+"scripts": {
+  "dev": "vite",
+  "build": "tsc --noEmit && vite build",
+  "preview": "vite preview",
+  "lint": "eslint .",
+  "format": "prettier --write .",
+  "predeploy": "npm run build && xcopy dist\\index.html dist\\404.html* /Y",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
@@ -68,6 +70,7 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.32.0",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.4.2",
     "typescript": "^5.8.3",
     "vite": "^6.0.5",
